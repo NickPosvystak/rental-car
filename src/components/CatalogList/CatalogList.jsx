@@ -1,12 +1,34 @@
 import { CatalogItem } from 'components/CatalogItem/CatalogItem';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchAllCars } from '../../redux/operations';
+import { selectCars } from '../../redux/selectors';
+import { StyledBox } from './StyledCatalogList.styled';
 
 export const CatalogList = () => {
+  const dispatch = useDispatch();
+  const { cars } = useSelector(selectCars);
+  console.log('cars: ', cars);
+
+  useEffect(() => {
+    dispatch(fetchAllCars());
+  }, [dispatch]);
+
+  const filteredCars = Array.isArray(cars)
+    ? cars
+        .filter(car => car.make && typeof car.make === 'string')
+        .map(car => ({ ...car, make: car.make.toLowerCase() }))
+    : [];
+
+  console.log('filteredCars: ', filteredCars);
+
   return (
     <>
-      <h2>Catalog List</h2>
-      <ul>
-        <CatalogItem />
-      </ul>
+      <StyledBox>
+        {filteredCars && filteredCars.map(car => (
+          <CatalogItem key={car.id} car={car} />
+        ))}
+      </StyledBox>
     </>
   );
 };
