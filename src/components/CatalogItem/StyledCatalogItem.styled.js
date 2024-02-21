@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { ReactComponent as HeartIcon } from '../../images/Icons/heart.svg';
 
 export const StyledItem = styled.li`
 position: relative;
@@ -27,13 +28,13 @@ export const StyledImg = styled.img`
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   }
 `;
-export const StyledHeartIcon = styled.svg`
-position: absolute;
-top: 12px;
-right: 12px;
+export const StyledHeartIcon = styled(HeartIcon)`
+  position: absolute;
+  top: 12px;
+  right: 12px;
 
-  fill: yellow;
-  stroke: red;
+  fill: currentColor;
+  stroke: currentColor;
   stroke-linejoin: round;
   stroke-linecap: butt;
   stroke-miterlimit: 4;

@@ -7,6 +7,7 @@ import {
   StyledModel,
   StyledModelName,
 } from './StyledCatalogItem.styled';
+// import { ReactComponent as HeartIcon } from '../../images/Icons/heart.svg';
 
 export const CatalogItem = ({ car }) => {
   if (!car) {
@@ -23,10 +24,7 @@ export const CatalogItem = ({ car }) => {
       {/* <StyledIconBtn onClick={() => toggleFavorite(id)}>
         <StyledHeart className={isFavorite(id) ? 'favorite' : ''} />
       </StyledIconBtn> */}
-      <StyledHeartIcon className="icon icon-heart">
-        <use xlinkHref="#icon-heart"></use>
-       
-      </StyledHeartIcon>
+      <StyledHeartIcon />
       <StyledModelName>
         <span>
           {car.make.charAt(0).toUpperCase() + car.make.slice(1)},&nbsp;
