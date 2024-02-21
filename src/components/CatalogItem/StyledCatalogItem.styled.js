@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { ReactComponent as HeartIcon } from '../../images/Icons/heart.svg';
 
 export const StyledItem = styled.li`
-position: relative;
+  position: relative;
   display: flex;
   flex-direction: column;
 
@@ -23,15 +23,11 @@ export const StyledImg = styled.img`
 
   width: 274px;
   height: 268px;
-  &:focus {
-    outline: none;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-  }
 `;
 export const StyledHeartIcon = styled(HeartIcon)`
   position: absolute;
-  top: 12px;
-  right: 12px;
+  top: 14px;
+  right: 14px;
 
   fill: currentColor;
   stroke: currentColor;
@@ -40,8 +36,17 @@ export const StyledHeartIcon = styled(HeartIcon)`
   stroke-miterlimit: 4;
   stroke-width: 3.1633;
 
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  transition-duration: 750ms;
+
+  &:hover {
+    width: 22px;
+    height: 22px;
+    scale: 1.5;
+    transition-duration: 450ms;
+  }
 `;
 
 export const StyledModelName = styled.div`

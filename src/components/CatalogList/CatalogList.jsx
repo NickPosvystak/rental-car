@@ -8,7 +8,6 @@ import { StyledBox } from './StyledCatalogList.styled';
 export const CatalogList = () => {
   const dispatch = useDispatch();
   const { cars } = useSelector(selectCars);
-  console.log('cars: ', cars);
 
   useEffect(() => {
     dispatch(fetchAllCars());
@@ -20,7 +19,6 @@ export const CatalogList = () => {
         .map(car => ({ ...car, make: car.make.toLowerCase() }))
     : [];
 
-  console.log('filteredCars: ', filteredCars);
 
   return (
     <>
