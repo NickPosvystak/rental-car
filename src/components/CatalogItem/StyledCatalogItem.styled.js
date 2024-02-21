@@ -84,4 +84,10 @@ export const StyledBtn = styled.button`
   height: 44px;
   margin-top: auto;
   cursor: pointer;
+  transition-duration: 550ms;
+
+  &:hover {
+    transition-duration: 350ms;
+    background: var(--hover-color);
+  }
 `;
