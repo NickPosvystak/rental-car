@@ -30,6 +30,7 @@ export const StyledImg = styled.img`
   width: 274px;
   height: 268px;
 `;
+
 export const StyledHeartIcon = styled(HeartIcon)`
   position: absolute;
   top: 14px;
@@ -46,11 +47,17 @@ export const StyledHeartIcon = styled(HeartIcon)`
   height: 18px;
   cursor: pointer;
   transition-duration: 750ms;
+  path {
+    fill: ${props =>
+      props.isFavorites ? 'var(--modelsColor)' : 'transparent'};
+    stroke: ${props =>
+      props.isFavorites ? 'var(--modelsColor)' : 'var(--second-color)'};
+  }
 
   &:hover {
     width: 22px;
     height: 22px;
-    scale: 1.5;
+    transform: scale(1.5);
     transition-duration: 450ms;
     path {
       fill: red;
