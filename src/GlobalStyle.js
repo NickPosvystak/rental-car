@@ -4,6 +4,8 @@ const GlobalStyle = createGlobalStyle`
 :root{
 --headerFontSize: 40px; 
 --descriptionFont: 16px;
+--loadBtnFont: 16px;
+
 
 /* Colors */
 --modelsColor:rgb(52, 112, 255);

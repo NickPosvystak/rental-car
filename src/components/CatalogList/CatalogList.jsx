@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchAllCars } from '../../redux/operations';
 import { selectCars } from '../../redux/selectors';
 import { StyledBox } from './StyledCatalogList.styled';
+import { LoadMoreBtn } from 'components/LoadMoreBtn/LoadMoreBtn';
 
 export const CatalogList = () => {
   const dispatch = useDispatch();
@@ -19,14 +20,13 @@ export const CatalogList = () => {
         .map(car => ({ ...car, make: car.make.toLowerCase() }))
     : [];
 
-
   return (
     <>
       <StyledBox>
-        {filteredCars && filteredCars.map(car => (
-          <CatalogItem key={car.id} car={car} />
-        ))}
+        {filteredCars &&
+          filteredCars.map(car => <CatalogItem key={car.id} car={car} />)}
       </StyledBox>
+      <LoadMoreBtn />
     </>
   );
 };
