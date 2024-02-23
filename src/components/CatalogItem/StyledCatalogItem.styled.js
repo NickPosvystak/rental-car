@@ -58,10 +58,7 @@ export const StyledHeartIcon = styled(HeartIcon)`
     height: 22px;
     transform: scale(1.5);
     transition-duration: 450ms;
-    path {
-      fill: red;
-      stroke: red;
-    }
+    
   }
 `;
 
