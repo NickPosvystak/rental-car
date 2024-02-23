@@ -8,7 +8,6 @@ import {
   StyledModel,
   StyledModelName,
 } from './StyledCatalogItem.styled';
-import { useEffect, useState } from 'react';
 import { addToFavorites, removeFromFavorites } from '../../redux/carReducer';
 import { selectFavoritesCars } from '../../redux/selectors';
 
