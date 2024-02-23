@@ -14,27 +14,20 @@ import { selectFavoritesCars } from '../../redux/selectors';
 
 export const CatalogItem = ({ car }) => {
   const dispatch = useDispatch();
-  const [isFavorite, setIsFavorite] = useState(false);
   const favoritesCars = useSelector(selectFavoritesCars);
 
-  useEffect(() => {
-    setIsFavorite(favoritesCars.some(favoriteCar => favoriteCar.id === car.id));
-  }, [favoritesCars, car.id]);
+   const isFavorite = favoritesCars.some(
+     favoriteCar => favoriteCar.id === car.id
+   );
 
-  const handleToggleFavorites = () => {
-    if (isFavorite) {
-      dispatch(removeFromFavorites(car.id));
-    } else {
-      const isAlreadyFavorite = favoritesCars.some(
-        favoriteCar => favoriteCar.id === car.id
-      );
-      if (!isAlreadyFavorite) {
-        dispatch(addToFavorites(car));
-      }
-    }
-    setIsFavorite(prevState => !prevState);
+ const handleToggleFavorites = () => {
+   if (isFavorite) {
+     dispatch(removeFromFavorites(car.id));
+   } else {
+     dispatch(addToFavorites(car));
+   }
   };
-
+  
   const addressParts = car.address.split(',').map(part => part.trim());
   const city = addressParts[1];
   const country = addressParts[2];
