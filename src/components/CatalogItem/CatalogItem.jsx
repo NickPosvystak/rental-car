@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
 import {
-  StyledBtn,
   StyledCarDescription,
   StyledHeartIcon,
   StyledImg,
@@ -10,23 +9,24 @@ import {
 } from './StyledCatalogItem.styled';
 import { addToFavorites, removeFromFavorites } from '../../redux/carReducer';
 import { selectFavoritesCars } from '../../redux/selectors';
+import CarModal from 'components/Modal/Modal';
 
 export const CatalogItem = ({ car }) => {
   const dispatch = useDispatch();
   const favoritesCars = useSelector(selectFavoritesCars);
 
-   const isFavorite = favoritesCars.some(
-     favoriteCar => favoriteCar.id === car.id
-   );
+  const isFavorite = favoritesCars.some(
+    favoriteCar => favoriteCar.id === car.id
+  );
 
- const handleToggleFavorites = () => {
-   if (isFavorite) {
-     dispatch(removeFromFavorites(car.id));
-   } else {
-     dispatch(addToFavorites(car));
-   }
+  const handleToggleFavorites = () => {
+    if (isFavorite) {
+      dispatch(removeFromFavorites(car.id));
+    } else {
+      dispatch(addToFavorites(car));
+    }
   };
-  
+
   const addressParts = car.address.split(',').map(part => part.trim());
   const city = addressParts[1];
   const country = addressParts[2];
@@ -51,28 +51,13 @@ export const CatalogItem = ({ car }) => {
         {city}, {country} | {car.rentalCompany} | {car.type} | {car.id} |{' '}
         {car.accessories[0]}
       </StyledCarDescription>
-      <StyledBtn
-      // carId={car.id}
-      // carInfo={{
-      //   img,
-      //   make,
-      //   model,
-      //   year,
-      //   city,
-      //   country,
-      //   type,
-      //   id,
-      //   accessories,
-      //   functionalities,
-      //   rentalPrice,
-      //   rentalCompany,
-      //   address,
-      //   rentalConditions,
-      //   mileage,
-      // }}
+      <CarModal carInfo={car} />
+      {/* <StyledBtn
+        onClick={handleOpen}
+        
       >
         Learn more
-      </StyledBtn>
+      </StyledBtn> */}
     </StyledItem>
   );
 };
