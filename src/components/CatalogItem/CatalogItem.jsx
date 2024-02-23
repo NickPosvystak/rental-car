@@ -10,22 +10,29 @@ import {
 } from './StyledCatalogItem.styled';
 import { useState } from 'react';
 import { addToFavorites, removeFromFavorites } from '../../redux/carReducer';
+import { selectFavoritesCars } from '../../redux/selectors';
+import { SvgHeart } from './SvgHeart';
 
 export const CatalogItem = ({ car }) => {
   const dispatch = useDispatch();
-  const [isFavorites, setIsFavorites] = useState(false);
+  const [isFavorite, setIsFavorite] = useState(false);
+  const favoritesCars = useSelector(selectFavoritesCars);
 
   if (!car) {
     return null;
   }
 
   const handleToggleFavorites = () => {
-    if (isFavorites) {
+    if (isFavorite) {
+      console.log('isFavorite: ', isFavorite);
       dispatch(removeFromFavorites(car.id));
+      console.log('removeFromFavorites(car.id): ', removeFromFavorites(car.id));
     } else {
-      dispatch(addToFavorites(car));
+      if (!favoritesCars.some(favoriteCar => favoriteCar.id === car.id)) {
+        dispatch(addToFavorites(car));
+      }
     }
-    setIsFavorites(prevState => !prevState);
+    setIsFavorite(prevState => !prevState);
   };
 
   const addressParts = car.address.split(',').map(part => part.trim());
@@ -35,10 +42,8 @@ export const CatalogItem = ({ car }) => {
   return (
     <StyledItem>
       <StyledImg src={car.img} alt={car.make} />
-      <StyledHeartIcon
-        onClick={handleToggleFavorites}
-        isFavorites={isFavorites}
-      />
+      <SvgHeart isFavorite={isFavorite} onClick={handleToggleFavorites} />
+
       <StyledModelName>
         <span>
           {car.make.charAt(0).toUpperCase() + car.make.slice(1)},&nbsp;

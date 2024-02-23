@@ -12,7 +12,7 @@ export const StyledItem = styled.li`
   transition: transform 0.25s cubic-bezier(0.7, 0.98, 0.86, 0.98),
     box-shadow 0.25s cubic-bezier(0.7, 0.98, 0.86, 0.98);
   &:hover {
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
     box-shadow: 0 9px 47px 11px rgba(51, 51, 51, 0.18);
   }
 `;
@@ -48,10 +48,9 @@ export const StyledHeartIcon = styled(HeartIcon)`
   cursor: pointer;
   transition-duration: 750ms;
   path {
-    fill: ${props =>
-      props.isFavorites ? 'var(--modelsColor)' : 'transparent'};
+    fill: ${props => (props.isFavorite ? 'var(--modelsColor)' : 'transparent')};
     stroke: ${props =>
-      props.isFavorites ? 'var(--modelsColor)' : 'var(--second-color)'};
+      props.isFavorite ? 'var(--modelsColor)' : 'var(--second-color)'};
   }
 
   &:hover {
@@ -61,6 +60,7 @@ export const StyledHeartIcon = styled(HeartIcon)`
     transition-duration: 450ms;
     path {
       fill: red;
+      stroke: red;
     }
   }
 `;
