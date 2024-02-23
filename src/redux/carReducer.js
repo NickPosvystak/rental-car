@@ -22,8 +22,12 @@ const carsSlice = createSlice({
       );
     },
     removeFromFavorites(state, action) {
-      state.favoritesCars.filter(
+      state.favoritesCars = state.favoritesCars.filter(
         car => car.id !== action.payload
+      );
+      localStorage.setItem(
+        'favoritesCars',
+        JSON.stringify(state.favoritesCars)
       );
     },
     loadFavoritesFromStorage(state) {
