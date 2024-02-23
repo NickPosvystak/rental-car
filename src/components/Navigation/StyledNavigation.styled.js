@@ -6,6 +6,7 @@ export const StyledNavContainer = styled.div`
   justify-content: end;
   padding: 40px;
   font-size: var(--headerFontSize);
+  padding-right: 126px;
 `;
 export const StyledHeader = styled.div`
   display: flex;

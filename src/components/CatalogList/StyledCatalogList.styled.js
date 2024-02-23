@@ -6,4 +6,5 @@ export const StyledBox = styled.ul`
   column-gap: 29px;
   row-gap: 50px;
   padding: 50px 107px 100px;
+
 `;
