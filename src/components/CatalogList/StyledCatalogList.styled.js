@@ -5,6 +5,5 @@ export const StyledBox = styled.ul`
   flex-wrap: wrap;
   column-gap: 29px;
   row-gap: 50px;
-  padding: 50px 107px 100px;
-
+padding-bottom: 50px;
 `;

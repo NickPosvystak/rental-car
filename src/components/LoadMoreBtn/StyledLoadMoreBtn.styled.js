@@ -10,7 +10,7 @@ export const StyledBtn = styled.button`
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 84px;
+  /* padding-bottom: 84px; */
 
   font-size: var(--loadBtnFont);
   font-weight: var(--font-weight-500);

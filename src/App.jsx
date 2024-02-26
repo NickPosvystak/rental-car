@@ -4,6 +4,7 @@ import GlobalStyle from 'GlobalStyle';
 import { Navigation } from 'components/Navigation/Navigation';
 import { CirclesWithBar } from 'react-loader-spinner';
 import { StyledLoader } from './pages/Home/StyledHome.styled';
+import { StyledContainer } from 'StyledAPP.styled';
 
 const Home = React.lazy(() => import('./pages/Home/Home'));
 const Catalog = React.lazy(() => import('./pages/Catalog/Catalog'));
@@ -11,7 +12,7 @@ const Favorites = React.lazy(() => import('./pages/Favorites/Favorites'));
 
 export const App = () => {
   return (
-    <div>
+    <StyledContainer>
       <GlobalStyle />
       <Navigation />
       <Suspense
@@ -38,6 +39,6 @@ export const App = () => {
           <Route path="/favorites" element={<Favorites />} />
         </Routes>
       </Suspense>
-    </div>
+    </StyledContainer>
   );
 };

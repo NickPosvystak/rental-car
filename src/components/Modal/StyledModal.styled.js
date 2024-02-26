@@ -1,7 +1,9 @@
 import { Box } from '@mui/material';
 import styled from 'styled-components';
+import { IoMdClose } from 'react-icons/io';
 
 export const StyledModalContainer = styled.div`
+position: relative;
 margin-top: auto;
 `;
 export const StyledBtnMore = styled.button`
@@ -124,4 +126,11 @@ export const StyledBtn = styled.a`
     transition-duration: 350ms;
     background: var(--hover-color);
   }
+`;
+export const StyledCloseIcon = styled(IoMdClose)`
+position: absolute;
+top: 16px;
+right: 16px;
+  width: 24px;
+  height: 24px;
 `;

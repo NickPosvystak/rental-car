@@ -4,6 +4,7 @@ import {
   StyledBox,
   StyledBtn,
   StyledBtnMore,
+  StyledCloseIcon,
   StyledConditionsTitle,
   StyledDescription,
   StyledFunc,
@@ -41,56 +42,47 @@ export default function CarModal({ carInfo }) {
         aria-describedby="modal-modal-description"
       >
         <StyledBox>
-          
-            <StyledImg src={carInfo.img} alt={carInfo.make} />
-            <StyledModelBox>
-              <span>
-                {carInfo.make.charAt(0).toUpperCase() + carInfo.make.slice(1)}
-                &nbsp;
-                <StyledModel>{carInfo.model},</StyledModel>
-                &nbsp;{carInfo.year}
-              </span>
-            </StyledModelBox>
-          
-              <StyledDescription>
-                {city}, {country} | id:{carInfo.id} | Year:
-                {carInfo.year} | Type:{carInfo.type} | fuelConsumption:
-                {carInfo.fuelConsumption} | engineSize:
-                {carInfo.engineSize}
-              </StyledDescription>
-              <StyledModelDescription>
-                {carInfo.description}
-              </StyledModelDescription>
-            
-          
-              <StyledFunc>Accessories and functionalities:</StyledFunc>
-              <StyledFuncDesc>
-                {carInfo.functionalities.map(func => func).join(' | ')}
-              </StyledFuncDesc>
-            
-          
-              <StyledConditionsTitle>RentalConditions</StyledConditionsTitle>
-              <StyledItemsBox>
-                <StyledItems>
-                  Minimum age: <StyledModel>{minimumAge}</StyledModel>
-                </StyledItems>
-                {rentalConditions.map((condition, index) => (
-                  <StyledItems key={index}>{condition}</StyledItems>
-                ))}
+          <StyledCloseIcon />
+          <StyledImg src={carInfo.img} alt={carInfo.make} />
+          <StyledModelBox>
+            <span>
+              {carInfo.make.charAt(0).toUpperCase() + carInfo.make.slice(1)}
+              &nbsp;
+              <StyledModel>{carInfo.model},</StyledModel>
+              &nbsp;{carInfo.year}
+            </span>
+          </StyledModelBox>
+          <StyledDescription>
+            {city}, {country} | id:{carInfo.id} | Year:
+            {carInfo.year} | Type:{carInfo.type} | fuelConsumption:
+            {carInfo.fuelConsumption} | engineSize:
+            {carInfo.engineSize}
+          </StyledDescription>
+          <StyledModelDescription>{carInfo.description}</StyledModelDescription>
+          <StyledFunc>Accessories and functionalities:</StyledFunc>
+          <StyledFuncDesc>
+            {carInfo.functionalities.map(func => func).join(' | ')}
+          </StyledFuncDesc>
+          <StyledConditionsTitle>RentalConditions</StyledConditionsTitle>
+          <StyledItemsBox>
+            <StyledItems>
+              Minimum age: <StyledModel>{minimumAge}</StyledModel>
+            </StyledItems>
+            {rentalConditions.map((condition, index) => (
+              <StyledItems key={index}>{condition}</StyledItems>
+            ))}
 
-                <StyledItems>
-                  Mileage:{' '}
-                  <StyledModel>
-                    {Number(carInfo.mileage).toLocaleString()}
-                  </StyledModel>
-                </StyledItems>
-                <StyledItems>
-                  Price: <StyledModel>{carInfo.rentalPrice}</StyledModel>
-                </StyledItems>
-              </StyledItemsBox>
-            
-            <StyledBtn href="tel:+380730000000">Rental car</StyledBtn>
-        
+            <StyledItems>
+              Mileage:{' '}
+              <StyledModel>
+                {Number(carInfo.mileage).toLocaleString()}
+              </StyledModel>
+            </StyledItems>
+            <StyledItems>
+              Price: <StyledModel>{carInfo.rentalPrice}</StyledModel>
+            </StyledItems>
+          </StyledItemsBox>
+          <StyledBtn href="tel:+380730000000">Rental car</StyledBtn>
         </StyledBox>
       </Modal>
     </StyledModalContainer>
