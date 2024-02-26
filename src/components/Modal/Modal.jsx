@@ -1,15 +1,34 @@
 import * as React from 'react';
 import Modal from '@mui/material/Modal';
-import { StyledBox, StyledBtnMore, StyledDescription, StyledModel, StyledModelBox } from './StyledModal.styled';
+import {
+  StyledBox,
+  StyledBtn,
+  StyledBtnMore,
+  StyledConditionsTitle,
+  StyledDescription,
+  StyledFunc,
+  StyledFuncDesc,
+  StyledImg,
+  StyledItems,
+  StyledItemsBox,
+  StyledModel,
+  StyledModelBox,
+  StyledModelDescription,
+} from './StyledModal.styled';
 
 export default function CarModal({ carInfo }) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
-    
-      const addressParts = carInfo.address.split(',').map(part => part.trim());
-      const city = addressParts[1];
-      const country = addressParts[2];
+  const handleClose = () => setOpen(false);
+
+  const addressParts = carInfo.address.split(',').map(part => part.trim());
+  const city = addressParts[1];
+  const country = addressParts[2];
+
+  const minimumAgeMatch = carInfo.rentalConditions.match(/Minimum age: (\d+)/);
+  const minimumAge = minimumAgeMatch ? minimumAgeMatch[1] : '';
+
+  const rentalConditions = carInfo.rentalConditions.split('\n').slice(1);
 
   return (
     <div>
@@ -22,40 +41,54 @@ export default function CarModal({ carInfo }) {
       >
         <StyledBox>
           <div>
-            <img
-              src={carInfo.img}
-              alt={carInfo.make}
-              width="461"
-              height="248"
-            />
+            <StyledImg src={carInfo.img} alt={carInfo.make} />
             <StyledModelBox>
               <span>
-                {carInfo.make.charAt(0).toUpperCase() + carInfo.make.slice(1)}&nbsp;
+                {carInfo.make.charAt(0).toUpperCase() + carInfo.make.slice(1)}
+                &nbsp;
                 <StyledModel>{carInfo.model},</StyledModel>
                 &nbsp;{carInfo.year}
               </span>
             </StyledModelBox>
             <div>
               <StyledDescription>
-                {city}, {country} | id:{carInfo.id}| Year:
-                {carInfo.year}| Type:{carInfo.type} | fuelConsumption:
+                {city}, {country} | id:{carInfo.id} | Year:
+                {carInfo.year} | Type:{carInfo.type} | fuelConsumption:
                 {carInfo.fuelConsumption} | engineSize:
                 {carInfo.engineSize}
               </StyledDescription>
-              <p>{carInfo.description}</p>
+              <StyledModelDescription>
+                {carInfo.description}
+              </StyledModelDescription>
             </div>
             <div>
-              <h2>Accessories and functionalities:</h2>
-              <p>{carInfo.functionalities}.trim('|')</p>
+              <StyledFunc>Accessories and functionalities:</StyledFunc>
+              <StyledFuncDesc>
+                {carInfo.functionalities.map(func => func).join(' | ')}
+              </StyledFuncDesc>
             </div>
             <div>
-              <p>Minimum age:{carInfo.rentalConditions[0]}</p>
-              <p>{carInfo.rentalConditions[1]}</p>
-              <p>{carInfo.rentalConditions[2]}</p>
-              <p>Mileage:{carInfo.mileage}</p>
-              <p>Price:{carInfo.rentalPrice}</p>
+              <StyledConditionsTitle>RentalConditions</StyledConditionsTitle>
+              <StyledItemsBox>
+                <StyledItems>
+                  Minimum age: <StyledModel>{minimumAge}</StyledModel>
+                </StyledItems>
+                {rentalConditions.map((condition, index) => (
+                  <StyledItems key={index}>{condition}</StyledItems>
+                ))}
+
+                <StyledItems>
+                  Mileage:{' '}
+                  <StyledModel>
+                    {Number(carInfo.mileage).toLocaleString()}
+                  </StyledModel>
+                </StyledItems>
+                <StyledItems>
+                  Price: <StyledModel>{carInfo.rentalPrice}</StyledModel>
+                </StyledItems>
+              </StyledItemsBox>
             </div>
-            <a href="tel:+380730000000">Rental car</a>
+            <StyledBtn href="tel:+380730000000">Rental car</StyledBtn>
           </div>
         </StyledBox>
       </Modal>
