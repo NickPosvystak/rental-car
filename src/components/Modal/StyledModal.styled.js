@@ -1,6 +1,9 @@
 import { Box } from '@mui/material';
 import styled from 'styled-components';
 
+export const StyledModalContainer = styled.div`
+margin-top: auto;
+`;
 export const StyledBtnMore = styled.button`
   font-size: 14px;
   font-weight: var(--font-weight-600);
@@ -12,7 +15,6 @@ export const StyledBtnMore = styled.button`
   background: var(--modelsColor);
   width: 274px;
   height: 44px;
-  margin-top: auto;
   cursor: pointer;
   transition-duration: 550ms;
 

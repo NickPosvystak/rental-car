@@ -30,3 +30,10 @@ export const StyledImg = styled.img`
     transform: scale(1.1);
   }
 `;
+
+export const StyledLoader = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+`;

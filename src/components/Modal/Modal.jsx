@@ -11,6 +11,7 @@ import {
   StyledImg,
   StyledItems,
   StyledItemsBox,
+  StyledModalContainer,
   StyledModel,
   StyledModelBox,
   StyledModelDescription,
@@ -31,7 +32,7 @@ export default function CarModal({ carInfo }) {
   const rentalConditions = carInfo.rentalConditions.split('\n').slice(1);
 
   return (
-    <div>
+    <StyledModalContainer>
       <StyledBtnMore onClick={handleOpen}>Learn more</StyledBtnMore>
       <Modal
         open={open}
@@ -92,6 +93,6 @@ export default function CarModal({ carInfo }) {
         
         </StyledBox>
       </Modal>
-    </div>
+    </StyledModalContainer>
   );
 }
