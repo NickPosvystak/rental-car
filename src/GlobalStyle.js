@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
 --modalTitleFont: 18px;
 --modalModelFont: 14px;
 --modalDescriptionFont: 12px;
+--homeFont: 20px;
 
 
 /* Colors */

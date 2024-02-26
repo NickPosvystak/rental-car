@@ -40,7 +40,7 @@ export default function CarModal({ carInfo }) {
         aria-describedby="modal-modal-description"
       >
         <StyledBox>
-          <div>
+          
             <StyledImg src={carInfo.img} alt={carInfo.make} />
             <StyledModelBox>
               <span>
@@ -50,7 +50,7 @@ export default function CarModal({ carInfo }) {
                 &nbsp;{carInfo.year}
               </span>
             </StyledModelBox>
-            <div>
+          
               <StyledDescription>
                 {city}, {country} | id:{carInfo.id} | Year:
                 {carInfo.year} | Type:{carInfo.type} | fuelConsumption:
@@ -60,14 +60,14 @@ export default function CarModal({ carInfo }) {
               <StyledModelDescription>
                 {carInfo.description}
               </StyledModelDescription>
-            </div>
-            <div>
+            
+          
               <StyledFunc>Accessories and functionalities:</StyledFunc>
               <StyledFuncDesc>
                 {carInfo.functionalities.map(func => func).join(' | ')}
               </StyledFuncDesc>
-            </div>
-            <div>
+            
+          
               <StyledConditionsTitle>RentalConditions</StyledConditionsTitle>
               <StyledItemsBox>
                 <StyledItems>
@@ -87,9 +87,9 @@ export default function CarModal({ carInfo }) {
                   Price: <StyledModel>{carInfo.rentalPrice}</StyledModel>
                 </StyledItems>
               </StyledItemsBox>
-            </div>
+            
             <StyledBtn href="tel:+380730000000">Rental car</StyledBtn>
-          </div>
+        
         </StyledBox>
       </Modal>
     </div>

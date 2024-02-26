@@ -38,9 +38,11 @@ export const StyledBox = styled(Box)`
   background: var(--second-color);
 `;
 export const StyledImg = styled.img`
+  object-fit: cover;
   width: 461px;
   height: 248px;
   border-radius: 14px;
+  padding-bottom: 10px;
 `;
 export const StyledModel = styled.span`
   color: var(--modelsColor);
@@ -93,24 +95,24 @@ export const StyledItems = styled.span`
   line-height: 18px;
   color: var(--modalItemsColor);
   padding: 7px 14px;
- 
 `;
 
 export const StyledItemsBox = styled.div`
-display: flex;
-flex-wrap: wrap;
-gap: 8px;
-padding-bottom: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-bottom: 50px;
 `;
 export const StyledBtn = styled.a`
   font-size: var(--modalModelFont);
   font-weight: var(--font-weight-600);
   line-height: 20px;
   color: var(--second-color);
-  width: 168px;
-  height: 44px;
+  /* width: 168px;
+  height: 44px; */
   padding: 12px 50px 12px 50px;
   border-radius: 12px;
+  margin-top: auto;
 
   background: var(--modelsColor);
 

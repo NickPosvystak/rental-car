@@ -1,9 +1,10 @@
 import React from 'react';
-import { IoHomeOutline } from 'react-icons/io5';
-import { IoCarSportOutline } from 'react-icons/io5';
-import { MdFavoriteBorder } from 'react-icons/md';
+
 import {
+  StyledCatalogIcon,
+  StyledFavoriteIcon,
   StyledHeader,
+  StyledHomeIcon,
   StyledNavContainer,
   StyledNavLink,
 } from './StyledNavigation.styled';
@@ -14,16 +15,22 @@ export const Navigation = () => {
     <>
       <StyledNavContainer>
         <StyledHeader>
-          <IoHomeOutline />
-          <StyledNavLink to="/">Home</StyledNavLink>
+          <StyledNavLink to="/" activeclassname="active">
+            <StyledHomeIcon />
+            Home
+          </StyledNavLink>
         </StyledHeader>
         <StyledHeader>
-          <IoCarSportOutline />
-          <StyledNavLink to="/catalog">Catalog</StyledNavLink>
+          <StyledNavLink to="/catalog">
+            <StyledCatalogIcon />
+            Catalog
+          </StyledNavLink>
         </StyledHeader>
         <StyledHeader>
-          <MdFavoriteBorder />
-          <StyledNavLink to="/favorites">Favorites</StyledNavLink>
+          <StyledNavLink to="/favorites">
+            <StyledFavoriteIcon />
+            Favorites
+          </StyledNavLink>
         </StyledHeader>
       </StyledNavContainer>
       <Outlet />

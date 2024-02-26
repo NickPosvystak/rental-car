@@ -8,12 +8,16 @@ export const StyledContainer = styled.div`
 export const StyledTitle = styled.h1`
   align-items: center;
   text-align: center;
+  padding-top: 20px;
+  padding-bottom: 14px;
 `;
 
 export const StyledDescription = styled.p`
-  text-align: center;
-  padding: 4px 40px;
-  font-size: var(--descriptionFont);
+  text-align: justify;
+  letter-spacing: 0.7px;
+  line-height: 30px;
+  padding: 10px 40px;
+  font-size: var(--homeFont);
 `;
 
 export const StyledImg = styled.img`
