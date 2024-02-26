@@ -35,7 +35,7 @@ export const CatalogItem = ({ car }) => {
     <StyledItem>
       <StyledImg src={car.img} alt={car.make} />
       <StyledHeartIcon
-        isFavorite={isFavorite}
+        isfavorite={isFavorite }
         onClick={handleToggleFavorites}
       />
 

@@ -48,9 +48,9 @@ export const StyledHeartIcon = styled(HeartIcon)`
   cursor: pointer;
   transition-duration: 750ms;
   path {
-    fill: ${props => (props.isFavorite ? 'var(--modelsColor)' : 'transparent')};
+    fill: ${props => (props.isfavorite ? 'var(--modelsColor)' : 'transparent')};
     stroke: ${props =>
-      props.isFavorite ? 'var(--modelsColor)' : 'var(--second-color)'};
+      props.isfavorite ? 'var(--modelsColor)' : 'var(--second-color)'};
   }
 
   &:hover {
