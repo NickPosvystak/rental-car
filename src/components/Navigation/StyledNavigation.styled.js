@@ -48,3 +48,14 @@ export const StyledFavoriteIcon = styled(MdFavoriteBorder)`
     fill: var(--modelsColor);
   }
 `;
+export const StyledContainer = styled.div`
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding-left: 128px;
+`;
+
+export const StyledImgLogo = styled.img`
+width: 140px;
+
+`;
