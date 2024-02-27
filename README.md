@@ -9,23 +9,23 @@ This is a web application for a company that provides car rental services in Ukr
 
  - **Car home page**. 
 
- ![Home page](../src/images/README/HomePage.jpg)
+ ![Home page](./src/images/README/HomePage.jpg)
 
  - **Detailed information: Each ad contains detailed information about the car and rental conditions. Open a modal window for more information**.
 
-  ![Details](../src/images/README/Details.jpg)
+  ![Details](./src/images/README/Details.jpg)
  
  - **Phone number: Contact the company by phone number using the "Rental car" button**.
 
-![Phone number](../src/images/README/RentalCarsPhone.jpg)
+![Phone number](./src/images/README/RentalCarsPhone.jpg)
 
 
   - **Favorites page**.
 
-  ![Favorites page](../src/images/README/FavoritesPage.jpg)
+  ![Favorites page](./src/images/README/FavoritesPage.jpg)
 
 
-  
+
 ## Deployment
 
 
