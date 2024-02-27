@@ -134,7 +134,9 @@ export const StyledCloseIcon = styled(IoMdClose)`
   width: 24px;
   height: 24px;
   cursor: pointer;
+  transition: transform 0.3s ease 250ms;
+
   &:hover {
-    transform: rotate(0.5turn);
+    transform: rotate(90deg);
   }
 `;
