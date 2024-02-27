@@ -15,7 +15,7 @@ This is a web application for a company that provides car rental services in Ukr
  - **Phone number: Contact the company by phone number using the "Rental car" button**.
 ![Phone number](../src/images/README/RentalCarsPhone.jpg)
   - **Favorites page**.
-  ![Favorites](../src/images/README/FavoritesPage.jpg)
+  ![Favorites page](../src/images/README/FavoritesPage.jpg)
 ## Deployment
 
 
