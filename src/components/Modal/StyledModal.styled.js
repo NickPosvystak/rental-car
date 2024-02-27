@@ -133,4 +133,5 @@ top: 16px;
 right: 16px;
   width: 24px;
   height: 24px;
+  
 `;

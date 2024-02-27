@@ -42,7 +42,7 @@ export default function CarModal({ carInfo }) {
         aria-describedby="modal-modal-description"
       >
         <StyledBox>
-          <StyledCloseIcon />
+          <StyledCloseIcon onClick={handleClose} />
           <StyledImg src={carInfo.img} alt={carInfo.make} />
           <StyledModelBox>
             <span>
