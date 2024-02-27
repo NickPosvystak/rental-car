@@ -128,10 +128,13 @@ export const StyledBtn = styled.a`
   }
 `;
 export const StyledCloseIcon = styled(IoMdClose)`
-position: absolute;
-top: 16px;
-right: 16px;
+  position: absolute;
+  top: 16px;
+  right: 16px;
   width: 24px;
   height: 24px;
-  
+  cursor: pointer;
+  &:hover {
+    transform: rotate(0.5turn);
+  }
 `;

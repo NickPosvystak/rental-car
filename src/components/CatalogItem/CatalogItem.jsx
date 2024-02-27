@@ -48,7 +48,7 @@ export const CatalogItem = ({ car }) => {
         <span>{car.rentalPrice}</span>
       </StyledModelName>
       <StyledCarDescription>
-        {city}, {country} | {car.rentalCompany} | {car.type} | {car.id} |{' '}
+        {city}, {country} | {car.rentalCompany} | {car.type} | Id: {car.id} |{' '}
         {car.accessories[0]}
       </StyledCarDescription>
       <CarModal carInfo={car} />
