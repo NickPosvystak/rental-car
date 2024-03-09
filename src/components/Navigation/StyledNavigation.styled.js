@@ -12,7 +12,11 @@ export const StyledContainer = styled.div`
 `;
 
 export const StyledImgLogo = styled.img`
+width: 50px;
+@media only screen and (min-width: 768px){
+
   width: 140px;
+}
 `;
 export const StyledNavContainer = styled.div`
   display: flex;
@@ -20,18 +24,22 @@ export const StyledNavContainer = styled.div`
   font-size: var(--headerFontSize);
 `;
 export const StyledHeader = styled.div`
-  display: flex;
-  align-items: center;
-  border: none;
-  border-radius: 6px;
-  padding: 10px 18px;
-  /* margin-right: 24px; */
-  cursor: pointer;
+display: none;
 
-  &:last-child {
-    margin-right: 0;
-  }
+@media only screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 18px;
+    /* margin-right: 24px; */
+    cursor: pointer;
+  
+    &:last-child {
+      margin-right: 0;
+    }
 
+}
 `;
 export const StyledNavLink = styled(NavLink)`
   display: flex;

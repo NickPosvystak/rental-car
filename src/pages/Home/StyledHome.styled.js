@@ -4,6 +4,10 @@ export const StyledContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  @media only screen and (min-width: 768px) {
+    /* padding: 10px; */
+  }
 `;
 export const StyledTitle = styled.h1`
   align-items: center;
@@ -16,8 +20,12 @@ export const StyledDescription = styled.p`
   text-align: justify;
   letter-spacing: 0.7px;
   line-height: 30px;
-  padding: 10px 40px;
-  font-size: var(--homeFont);
+  /* padding: 10px 40px; */
+  font-size: 16px;
+
+  @media only screen and (min-width: 768px) {
+    font-size: var(--homeFont);
+  }
 `;
 
 export const StyledImg = styled.img`
