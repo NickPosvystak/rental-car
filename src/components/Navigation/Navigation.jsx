@@ -17,6 +17,7 @@ export const Navigation = () => {
   return (
     <StyledContainer>
       <StyledImgLogo src={Logo} alt="logo" />
+      
       <StyledNavContainer>
         <StyledHeader>
           <StyledNavLink to="/" activeclassname="active">

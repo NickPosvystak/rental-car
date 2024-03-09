@@ -8,7 +8,12 @@ export const StyledContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 34px;
+  padding-bottom: 18px;
+  
+  @media only screen and (min-width: 768px){
+    padding-bottom: 34px;
+
+  };
 `;
 
 export const StyledImgLogo = styled.img`

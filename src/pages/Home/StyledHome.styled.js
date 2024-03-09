@@ -21,21 +21,31 @@ export const StyledDescription = styled.p`
   letter-spacing: 0.7px;
   line-height: 30px;
   /* padding: 10px 40px; */
-  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: var(-descriptionFont);
 
   @media only screen and (min-width: 768px) {
     font-size: var(--homeFont);
+    white-space: normal;
+    overflow: auto;
+    text-overflow: initial;
   }
 `;
 
 export const StyledImg = styled.img`
+  width: 100%;
   text-align: center;
-  width: 80%;
   transition: transform 0.6s cubic-bezier(0.45, 0.05, 0.55, 0.95);
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
   transition-duration: 500ms;
   &:hover {
     transform: scale(1.1);
+  }
+  @media only screen and (min-width: 768px){
+    width: 80%;
+
   }
 `;
 
