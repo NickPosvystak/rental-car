@@ -111,37 +111,56 @@ export const StyledFunc = styled.p`
   }
 `;
 export const StyledFuncDesc = styled.p`
-
-@media only screen and (min-width: 768px) {
-   
-}
-  font-size: var(--modalModelFont);
-  font-weight: var(--font-weight-500);
-  line-height: 20px;
+  font-size: var(--font_4);
   color: var(--modalDescriptionColor);
-  padding-bottom: 24px;
+  line-height: 16px;
+  padding-bottom: 16px;
+
+  @media only screen and (min-width: 768px) {
+    font-size: var(--modalModelFont);
+    font-weight: var(--font-weight-500);
+    padding-bottom: 24px;
+  }
 `;
 export const StyledConditionsTitle = styled.h3`
   font-size: var(--modalModelFont);
-  font-weight: var(--font-weight-500);
-  line-height: 20px;
-  padding-bottom: 8px;
+  line-height: 10px;
+  padding-bottom: 4px;
+
+  @media only screen and (min-width: 768px) {
+    font-weight: var(--font-weight-500);
+    line-height: 20px;
+    padding-bottom: 8px;
+  }
 `;
 export const StyledItems = styled.span`
-  font-size: var(--modalDescriptionFont);
-  font-weight: var(--font-weight-600);
-  line-height: 18px;
+  font-size: var(--font_2);
+  line-height: 12px;
   color: var(--modalItemsColor);
-  padding: 7px 14px;
+  padding: 4px 12px;
+
+  @media only screen and (min-width: 768px) {
+    font-size: var(--modalDescriptionFont);
+    font-weight: var(--font-weight-600);
+    line-height: 18px;
+    padding: 7px 14px;
+  }
 `;
 
 export const StyledItemsBox = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  padding-bottom: 50px;
+  gap: 4px;
+  padding-bottom: 30px;
+  
+  
+  @media only screen and (min-width: 768px) {
+    gap: 8px;
+    padding-bottom: 50px;
+  }
 `;
 export const StyledBtn = styled.a`
+
   font-size: var(--modalModelFont);
   font-weight: var(--font-weight-600);
   line-height: 20px;
