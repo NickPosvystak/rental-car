@@ -8,20 +8,28 @@ export const StyledContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 18px;
-  
-  @media only screen and (min-width: 768px){
-    padding-bottom: 34px;
+  height: 60px;
+  /* padding-bottom: 18px; */
+  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
 
-  };
+  @media only screen and (min-width: 768px) {
+    height: 84px;
+  }
+  @media only screen and (min-width: 1440px) {
+    height: 100px;
+  }
 `;
 
 export const StyledImgLogo = styled.img`
-width: 50px;
-@media only screen and (min-width: 768px){
-
-  width: 140px;
-}
+  padding-left: 10px;
+  width: 50px;
+  @media only screen and (min-width: 768px) {
+    padding-left: 24px;
+    width: 100px;
+  }
+  @media only screen and (min-width: 1440px) {
+    width: 140px;
+  }
 `;
 export const StyledNavContainer = styled.div`
   display: flex;
@@ -29,22 +37,25 @@ export const StyledNavContainer = styled.div`
   font-size: var(--headerFontSize);
 `;
 export const StyledHeader = styled.div`
-display: none;
+  display: none;
 
-@media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 768px) {
     display: flex;
     align-items: center;
+    font-size: var(--homeFont);
     border: none;
     border-radius: 6px;
-    padding: 10px 18px;
-    /* margin-right: 24px; */
+    padding: 4px 12px;
     cursor: pointer;
-  
+
     &:last-child {
       margin-right: 0;
     }
-
-}
+  }
+  @media only screen and (min-width: 1440px) {
+    font-size: var(--headerFontSize);
+    padding: 10px 18px;
+  }
 `;
 export const StyledNavLink = styled(NavLink)`
   display: flex;

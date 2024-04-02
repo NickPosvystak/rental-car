@@ -12,13 +12,15 @@ import {
 } from './StyledNavigation.styled';
 import { Outlet } from 'react-router-dom';
 import Logo from '../../images/LOGOCar.png';
+import LongMenu from 'components/Burger/Burger';
 
 export const Navigation = () => {
   return (
     <StyledContainer>
       <StyledImgLogo src={Logo} alt="logo" />
-      
+
       <StyledNavContainer>
+        <LongMenu />
         <StyledHeader>
           <StyledNavLink to="/" activeclassname="active">
             <StyledHomeIcon />

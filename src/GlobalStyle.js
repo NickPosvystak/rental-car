@@ -11,6 +11,11 @@ const GlobalStyle = createGlobalStyle`
 --modalDescriptionFont: 12px;
 --homeFont: 20px;
 
+/* Mobil version */
+--font_1: 16px;
+--font_2: 10px;
+--font_3: 14px;
+--font_4: 12px;
 
 /* Colors */
 --primaryColor:rgb(18, 20, 23);

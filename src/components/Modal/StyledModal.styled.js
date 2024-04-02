@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { IoMdClose } from 'react-icons/io';
 
 export const StyledModalContainer = styled.div`
-position: relative;
-margin-top: auto;
+  position: relative;
+  margin-top: auto;
 `;
 export const StyledBtnMore = styled.button`
   font-size: 14px;
@@ -31,56 +31,90 @@ export const StyledBox = styled(Box)`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 541px;
-  height: 752px;
+  width: 100vw;
+  max-height: 100vh;
+  padding: 10px;
   border: 2px solid #000;
-  box-shadow: 24px;
-  padding: 40px;
+  /* box-shadow: 24px; */
 
   border-radius: 24px;
-
   background: var(--second-color);
+
+  @media only screen and (min-width: 768px) {
+    width: 541px;
+    height: 752px;
+    padding: 40px;
+  }
 `;
 export const StyledImg = styled.img`
   object-fit: cover;
-  width: 461px;
-  height: 248px;
+  width: 100%;
+  height: 100%;
   border-radius: 14px;
   padding-bottom: 10px;
+
+  @media only screen and (min-width: 768px) {
+    width: 461px;
+    height: 248px;
+  }
 `;
 export const StyledModel = styled.span`
   color: var(--modelsColor);
 `;
 
 export const StyledModelBox = styled.div`
-  font-size: var(--modalTitleFont);
-  font-weight: var(--font-weight-500);
-  line-height: 24px;
-  padding-bottom: 8px;
+  font-size: var(--font_1);
+  padding-bottom: 2px;
+
+  @media only screen and (min-width: 768px) {
+    font-size: var(--modalTitleFont);
+    font-weight: var(--font-weight-500);
+    line-height: 24px;
+    padding-bottom: 8px;
+  }
 `;
 
 export const StyledDescription = styled.p`
-  font-size: var(--modalDescriptionFont);
-  font-weight: var(--font-weight-400);
-  line-height: 18px;
+  font-size: var(--font_2);
+  padding-bottom: 8px;
   color: var(--modalDescriptionColor);
-  padding-bottom: 14px;
+
+  @media only screen and (min-width: 768px) {
+    font-size: var(--modalDescriptionFont);
+    font-weight: var(--font-weight-400);
+    line-height: 18px;
+    padding-bottom: 14px;
+  }
 `;
 export const StyledModelDescription = styled.p`
-  font-size: var(--modalModelFont);
-  font-weight: var(--font-weight-400);
-  line-height: 20px;
-  padding-bottom: 24px;
+  font-size: var(--font_3);
+  padding-bottom: 14px;
   color: var(--primaryColor);
+
+  @media only screen and (min-width: 768px) {
+    font-size: var(--modalModelFont);
+    font-weight: var(--font-weight-400);
+    line-height: 20px;
+    padding-bottom: 24px;
+  }
 `;
 export const StyledFunc = styled.p`
-  font-size: var(--modalModelFont);
+  font-size: var(--font_4);
   font-weight: var(--font-weight-500);
-  line-height: 20px;
-  padding-bottom: 8px;
+  padding-bottom: 4px;
   color: var(--primaryColor);
+
+  @media only screen and (min-width: 768px) {
+    font-size: var(--modalModelFont);
+    line-height: 20px;
+    padding-bottom: 8px;
+  }
 `;
 export const StyledFuncDesc = styled.p`
+
+@media only screen and (min-width: 768px) {
+   
+}
   font-size: var(--modalModelFont);
   font-weight: var(--font-weight-500);
   line-height: 20px;

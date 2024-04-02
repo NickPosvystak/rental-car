@@ -4,26 +4,13 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 
-const options = [
-  'None',
-  'Atria',
-  'Callisto',
-  'Dione',
-  'Ganymede',
-  'Hangouts Call',
-  'Luna',
-  'Oberon',
-  'Phobos',
-  'Pyxis',
-  'Sedna',
-  'Titania',
-  'Triton',
-  'Umbriel',
-];
+import { useNavigate } from 'react-router-dom';
+import { StyledBurgerContainer } from './StyledBurger.styled';
 
-const ITEM_HEIGHT = 48;
+const options = ['Home', 'Catalog', 'Favorites'];
 
 export default function LongMenu() {
+  const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = event => {
@@ -32,9 +19,27 @@ export default function LongMenu() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  const handleOptionClick = option => {
+    switch (option) {
+      case 'Home':
+        navigate('/');
+        handleClose();
+        break;
+      case 'Catalog':
+        navigate('/catalog');
+        handleClose();
+        break;
+      case 'Favorites':
+        navigate('/favorites');
+        handleClose();
+        break;
+      default:
+        break;
+    }
+  };
 
   return (
-    <div>
+    <StyledBurgerContainer>
       <IconButton
         aria-label="more"
         id="long-button"
@@ -55,21 +60,25 @@ export default function LongMenu() {
         onClose={handleClose}
         PaperProps={{
           style: {
-            maxHeight: ITEM_HEIGHT * 4.5,
-            width: '20ch',
+            top: '15px',
+            right: '30px',
+            width: '70vw',
+            height: '30vh',
+            backgroundColor: '#ebe5e5', 
+            borderRadius: '8px', 
+            boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)', 
           },
         }}
       >
         {options.map(option => (
           <MenuItem
             key={option}
-            selected={option === 'Pyxis'}
-            onClick={handleClose}
+            onClick={() => handleOptionClick(option)}
           >
             {option}
           </MenuItem>
         ))}
       </Menu>
-    </div>
+    </StyledBurgerContainer>
   );
 }
