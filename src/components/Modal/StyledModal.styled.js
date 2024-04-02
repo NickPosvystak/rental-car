@@ -152,25 +152,22 @@ export const StyledItemsBox = styled.div`
   flex-wrap: wrap;
   gap: 4px;
   padding-bottom: 30px;
-  
-  
+
   @media only screen and (min-width: 768px) {
     gap: 8px;
     padding-bottom: 50px;
   }
 `;
 export const StyledBtn = styled.a`
-
   font-size: var(--modalModelFont);
   font-weight: var(--font-weight-600);
   line-height: 20px;
   color: var(--second-color);
   /* width: 168px;
   height: 44px; */
-  padding: 12px 50px 12px 50px;
-  border-radius: 12px;
+  border-radius: 10px;
   margin-top: auto;
-
+  padding: 8px 16px;
   background: var(--modelsColor);
 
   transition-duration: 550ms;
@@ -179,6 +176,10 @@ export const StyledBtn = styled.a`
     transition-duration: 350ms;
     background: var(--hover-color);
   }
+  
+  @media only screen and (min-width: 768px) {
+    padding: 12px 50px 12px 50px;
+  }
 `;
 export const StyledCloseIcon = styled(IoMdClose)`
   position: absolute;
@@ -186,6 +187,7 @@ export const StyledCloseIcon = styled(IoMdClose)`
   right: 16px;
   width: 24px;
   height: 24px;
+  color: var(--hover-color);
   cursor: pointer;
   transition: transform 0.3s ease 250ms;
 
