@@ -5,6 +5,9 @@ import { IoCarSportOutline } from 'react-icons/io5';
 import { MdFavoriteBorder } from 'react-icons/md';
 
 export const StyledContainer = styled.div`
+position: fixed;
+z-index: 1;
+width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;

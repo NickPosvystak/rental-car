@@ -4,9 +4,13 @@ export const StyledContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 70px 10px 10px;
 
   @media only screen and (min-width: 768px) {
-    /* padding: 10px; */
+    padding: 100px 26px 20px;
+  }
+  @media only screen and (min-width: 1440px) {
+    padding: 130px 40px 30px;
   }
 `;
 export const StyledTitle = styled.h1`

@@ -6,6 +6,12 @@ export const StyledBox = styled.ul`
   column-gap: 29px;
   row-gap: 50px;
   justify-content: space-evenly;
-  padding-top: 22px;
-padding-bottom: 50px;
+  padding-top: 84px;
+  padding-bottom: 50px;
+  @media only screen and (min-width: 768px) {
+    padding-top: 110px;
+  }
+  @media only screen and (min-width: 1440px) {
+    padding-top: 130px;
+  }
 `;

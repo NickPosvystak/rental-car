@@ -33,7 +33,7 @@ export const StyledBox = styled(Box)`
   transform: translate(-50%, -50%);
   width: 100vw;
   max-height: 100vh;
-  padding: 14px;
+  padding: 16px 12px;
   border: 2px solid #000;
   /* box-shadow: 24px; */
 
@@ -193,5 +193,13 @@ export const StyledCloseIcon = styled(IoMdClose)`
 
   &:hover {
     transform: rotate(90deg);
+  }
+  @media only screen and (max-width: 768px) {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    top: 22px;
+    right: 18px;
   }
 `;
