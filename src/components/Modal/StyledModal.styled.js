@@ -33,7 +33,7 @@ export const StyledBox = styled(Box)`
   transform: translate(-50%, -50%);
   width: 100vw;
   max-height: 100vh;
-  padding: 10px;
+  padding: 14px;
   border: 2px solid #000;
   /* box-shadow: 24px; */
 
@@ -151,7 +151,7 @@ export const StyledItemsBox = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
-  padding-bottom: 30px;
+  padding-bottom: 22px;
 
   @media only screen and (min-width: 768px) {
     gap: 8px;
